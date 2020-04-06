@@ -1,0 +1,30 @@
+<ion-view>
+  <ion-content scroll="false">
+    <div class="bar bar-header bar-calm">
+      <h1 class="title">Aplikasi Kuesioner</h1>
+    </div>
+    <div class="container-imgLgnPage">
+      <center>
+        <img src="img/lgn.png" class="img-lgnPage">
+      </center>
+    </div>
+    <div class="container-formLgnPage">
+      <div class="list">
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Email</span>
+          <input type="email" placeholder="Email" ng-model="msk.email">
+        </label>
+        <label class="item item-input item-floating-label">
+          <span class="input-label">Sandi</span>
+          <input type="password" placeholder="Sandi" ng-model="msk.sandi">
+        </label>
+        <button class="button button-full button-calm" ng-click="mskNormal(msk)">
+          Masuk
+        </button>
+        <center>
+          <a style="color: #000;">Belum punya akun? <a href="#/daftar" style="color: #22b4a9;"><b>Daftar!</b></a></a>
+        </center>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

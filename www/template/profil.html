@@ -1,0 +1,27 @@
+<ion-view view-title="Profil">
+  <ion-content class="padding" scroll="false">
+    <div class="container-profil" style="
+      background: url('img/1.jpeg') no-repeat center;
+      background-size: cover;
+      width: 100%;
+      background-zoom: 50%;">
+      <center>
+        <img class="img-profil" src="{{lgnImg}}">
+        <div class="upload-btn-wrapper">
+          <button class="btn"><i class="icon ion-image" style="font-size: 24px;"></i></button>
+          <input type="file" name="myfile" id="fileButton"/>
+        </div>
+      </center>
+      <div class="list card">
+        <a class="item item-icon-left">
+          <i class="icon ion-android-person"></i>
+          {{lgnNama}}
+        </a>
+        <a class="item item-icon-left">
+          <i class="icon ion-android-mail"></i>
+          {{lgnEmail}}
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,231 @@
+/*profil css*/
+div.container-profil {
+  padding-top: 25%;
+  height: 30%;
+}
+.img-profil {
+  width: 37%;
+  height: 115px;
+  border: 5px solid white;
+  background-color: white;
+  border-radius: 50%;
+}
+/*input foto profil*/
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  margin-left: -26%;
+  margin-right: 14%;
+  margin-bottom: -4%;
+}
+
+.btn {
+  border: 3px solid #22b4a9;
+  color: #22b4a9;
+  background-color: white;
+  padding: 2px 9px;
+  border-radius: 50%;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: hand;
+}
+/*nav shadow bottom*/
+.nav-me{
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+/*login css*/
+.img-lgnPage{
+  width: 50%;
+  height: 50%;
+}
+.container-imgLgnPage{
+  padding-top: 50px !important;
+  padding-bottom: 15px !important;
+}
+/*daftar css*/
+.formDftPage{
+  padding-top: 40px;
+}
+/*home css*/
+.container-home{
+	width: 1366px;
+	height: 631px;
+	margin: 0px auto;
+}
+.btn-home1{
+	width: 683px;
+	float: left;
+}
+.btn-home2{
+	width: 683px;
+	float: left;
+}
+.btn-home3{
+	width: 683px;
+	float: left;
+}
+.btn-home4{
+	width: 683px;
+	float: left;
+}
+.btn1{
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+	border-width: 2px;
+	border-left: 0px;
+	border-top: 0px;
+}
+.btn2{
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+	border-width: 2px;
+	border-top: 0px;
+	border-right: 0px;
+}
+.btn3{
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+	border-width: 2px;
+	border-left: 0px;
+	border-bottom: 0px;
+}
+.btn4{
+	width: 100%;
+	height: 100%;
+	border-radius: 0px;
+	border-width: 2px;
+	border-bottom: 0px;
+	border-right: 0px;
+}
+@media screen and (max-width: 1365px){
+	.container-home{
+		width: 100%;
+	}
+	.btn-home1{
+		width: 50%;
+		height: 28%;
+		margin-top: -6px;
+	}
+	.btn-home2{
+		width: 50%;
+		height: 28%;
+		margin-top: -6px;
+	}
+	.btn-home3{
+		width: 50%;
+		height: 28%;
+	}
+	.btn-home4{
+		width: 50%;
+		height: 28%;
+	}
+	.img-home{
+		width: 100%;
+		height: 315px;
+	}
+	.icn-home{
+		width: 80px;
+		height: 80px;
+		margin-bottom: -10px;
+	}
+}
+@media screen and (max-width: 400px){
+	.container-home{
+		width: 100%;
+	}
+	.btn-home1{
+		width: 50%;
+		height: 20%;
+		margin-top: -6px;
+	}
+	.btn-home2{
+		width: 50%;
+		height: 20%;
+		margin-top: -6px;
+	}
+	.btn-home3{
+		width: 50%;
+		height: 20%;
+	}
+	.btn-home4{
+		width: 50%;
+		height: 20%;
+	}
+	.img-home{
+		width: 100%;
+		height: 280px;
+	}
+	.icn-home{
+		width: 60px;
+		height: 60px;
+	}
+}
+/*kolom pertanyaan*/
+.rowNmr{
+	font-family: segoe UI;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+}
+.rowPer{
+	font-family: segoe UI;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: normal;
+}
+/* radio button jawaban */
+.item-icon-left .item-content {
+  	padding-left:3em !important;
+  	padding-top:5px !important;
+  	padding-bottom:5px !important;
+  	background-color: white !important;
+}
+.item-icon-left i {
+  	left:0;
+  	padding-top:2px !important;
+  	padding-bottom:5px !important;
+  	right: auto;
+  	color: #22b4a9 !important;
+  	font-size: 20px !important;
+	font-family: segoe UI;
+}
+.item-radio input ~ .radio-icon {
+    visibility: visible !important;
+}
+.item-radio > .radio-icon:before {
+    content: "\f3a6" !important; /*deselected - Ionic class = ion-android-radio-button-off */
+}
+.item-radio > input[type=radio]:checked ~ .radio-icon:before {
+    content: "\f3a7" !important; /*selected Ionic class = ion-android-radio-button-on */
+}
+/*kolom info*/
+.rowInfo{
+  font-family: segoe UI;
+    text-align: center;
+    text-justify: inter-word;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.muter svg {
+  width: 64px;
+  height: 64px;
+  stroke: #FFF;
+  fill: #FFF;
+  margin-top: 70%;
+}
+

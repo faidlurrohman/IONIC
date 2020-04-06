@@ -1,0 +1,61 @@
+<ion-view>
+	<ion-content scroll="false" padding="true">
+    <div class="bar bar-header bar-calm">
+      <button class="button icon ion-arrow-left-c" ng-click="goBack()"></button>
+      <h1 class="title">Kuesioner</h1>
+    </div>
+    <div class="formDftPage">
+      <div class="row">
+        <div class="col">
+          <div class="rowNmr">
+            {{nmrUrut}}.
+          </div>
+        </div>
+        <div class="col col-90">
+          <div class="rowPer">{{soalKuis}}?</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col col-90">
+          <label class="item item-icon-left item-radio" style="border: none">
+            <input type="radio" name="group" class="hamba" ng-model="jwb.j1" value="10">
+            <div class="item-content">
+              Bisa
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col col-90">
+          <label class="item item-icon-left item-radio" style="border: none">
+            <input type="radio" name="group" class="hamba" ng-model="jwb.j1" value="4">
+            <div class="item-content">
+              Tidak Bisa
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col col-90">
+          <label class="item item-icon-left item-radio" style="border: none">
+            <input type="radio" name="group" class="hamba" ng-model="jwb.j1" value="7">
+            <div class="item-content">
+              Tidak Mau
+            </div>
+            <i class="radio-icon ion-checkmark"></i>
+          </label>
+        </div>
+      </div>
+    </div>
+		<div class="bar bar-footer bar-calm">
+			<div class="title">
+	  		<button class="button button-clear btnFtr" ng-click="prosesKuis()">{{btnVal}}</button>
+			</div>
+		</div>
+  </ion-content>
+</ion-view>
