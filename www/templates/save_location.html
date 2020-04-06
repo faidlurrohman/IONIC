@@ -1,0 +1,36 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">Save Location</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="cancel()">Cancel</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <form name="frmcari" novalidate ng-submit="frmcari.$valid && simpanLks()">
+      <div class="list">
+        <input type="text" id="smp.lat" ng-model="smp.lat" style="display: none;">
+        <input type="text" id="smp.long" ng-model="smp.long" style="display: none;">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Name</b></span>
+          <input type="text" id="smp.nama" name="smp.nama" required minlength="1" ng-model="smp.nama">
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Kategori Wisata
+          </div>
+          <select ng-model="smp.ktg" required>
+            <option value="Pantai">Pantai</option>
+            <option value="Pegunungan">Pegunungan</option>
+            <option value="Air Terjun">Air Terjun</option>
+            <option value="Danau">Danau</option>
+          </select>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Address</b></span>
+          <textarea type="text" id="smp.almt" ng-model="smp.almt" disabled></textarea>
+        </label>
+        <button class="button button-block button-positive" type="submit" ng-disabled="!frmcari.$valid">Save</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

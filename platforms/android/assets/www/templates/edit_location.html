@@ -1,0 +1,36 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">Edit Location</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="cancel()">Cancel</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <form ng-submit="simpanEdit()">
+      <div class="list">
+        <input type="text" id="edt.lat" ng-model="edt.lat" style="display: none;">
+        <input type="text" id="edt.long" ng-model="edt.long" style="display: none;">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Name</b></span>
+          <input type="text" id="edt.nama" ng-model="edt.nama">
+        </label>
+        <label class="item item-input item-select">
+          <div class="input-label">
+            Kategori Wisata
+          </div>
+          <select id="edt.ktg" ng-model="edt.ktg">
+            <option value="Pantai">Pantai</option>
+            <option value="Pegunungan">Pegunungan</option>
+            <option value="Air Terjun">Air Terjun</option>
+            <option value="Danau">Danau</option>
+          </select>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Address</b></span>
+          <input type="text" id="edt.almt" ng-model="edt.almt" disabled>
+        </label>
+          <button class="button button-block button-positive" type="submit">Save</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>

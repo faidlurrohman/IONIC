@@ -1,0 +1,46 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content edge-drag-threshold="false" drag-content="false">
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+
+    <!-- TABS -->
+    <ion-tabs class="tabs-icon-top tabs-positive tabs-color-active-default">
+      <ion-tab title="Map" icon-off="ion-map" icon-on="ion-map" href="#/app/map">
+        <ion-nav-view name="tab-map"></ion-nav-view>
+      </ion-tab>
+      <ion-tab title="Data" icon-off="ion-filing" icon-on="ion-filing" href="#/app/data">
+        <ion-nav-view name="tab-data"></ion-nav-view>
+      </ion-tab>
+      <ion-tab title="Profile" icon-off="ion-person" icon-on="ion-person" href="#/app/profile">
+        <ion-nav-view name="tab-profile"></ion-nav-view>
+      </ion-tab>
+      <ion-tab title="About" icon-off="ion-information-circled" icon-on="ion-information-circled" href="#/app/about" display:none>
+        <ion-nav-view name="tab-about"></ion-nav-view>
+      </ion-tab>
+    </ion-tabs>
+  </ion-side-menu-content>
+
+   <!-- Side Menu (left) -->
+  <ion-side-menu side="left">
+    <ion-content>
+      <center>
+        <div class="col" style="padding-top: 10%; padding-bottom: 10%; background-color: #387ef5;">
+          <img src="img/lg.png" width="170px" height="60px">
+        </div>
+      </center>
+      <ion-list>
+        <a class="item item-icon-left" href="#" ng-click="logout()">
+          <i class="icon ion-android-exit" style="color: #387ef5;"></i>
+          <h3 style="color: #387ef5;">Log Out</h3>
+        </a>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

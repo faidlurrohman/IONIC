@@ -1,0 +1,24 @@
+<ion-view view-title="Profile">
+  <ion-content class="padding">
+  	<div class="container-profil" style="
+  		background: url('img/bg-prf.jpg') no-repeat center;
+  		background-size: cover;
+  		width: 100%;
+  		background-zoom: 50%;">
+  		<center>
+    		<img class="img-profil" src="{{lgnFoto}}">
+    	</center>
+    	<div class="list card">
+		  <a class="item item-icon-left">
+		    <i class="icon ion-android-person"></i>
+		    {{lgnNama}}
+		  </a>
+		  <a class="item item-icon-left">
+		    <i class="icon ion-android-mail"></i>
+		    {{lgnEmail}}
+		  </a>
+		</div>
+		<button class="button button-clear button-positive" ng-click="edt_prf();">Edit Profile Name</button>
+	</div>
+  </ion-content>
+</ion-view>
