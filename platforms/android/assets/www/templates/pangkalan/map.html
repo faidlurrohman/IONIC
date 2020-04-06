@@ -1,0 +1,26 @@
+<ion-view>
+	<ion-header-bar class="bar-royal">
+		<h1 class="title">Pilih Lokasi Pangkalan</h1>
+  		<button class="button button-clear button-positive" ng-click="bHome();">
+  			<a class="button icon-left ion-backspace-outline button-clear"></a>
+  		</button>
+	</ion-header-bar>
+	<ion-content scroll="false">
+    	<div class="float-button">
+		    <span class="height-fix">
+		       	<button id="fab-profile" class="button button-fab button-fab-bottom-right fab-fixed button-royal pane">
+		         	<i class="icon ion-checkmark-round"></i>
+		       	</button>
+		    </span>
+		</div>
+    	<div class="float-button-lagi">
+		    <span class="height-fix">
+		       	<button id="fab-profile-lagi" class="button button-fab button-fab-bottom-right fab-fixed button-balanced pane">
+		         	<i class="icon ion-android-locate"></i>
+		       	</button>
+		    </span>
+		</div>
+    	<!-- <input id="cari" type="text" placeholder="Cari Lokasi"> -->
+	    <div id="map" data-tap-disabled="true"></div>
+	</ion-content>
+</ion-view>

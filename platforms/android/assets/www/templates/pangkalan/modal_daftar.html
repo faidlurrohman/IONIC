@@ -1,0 +1,41 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-royal">
+    <h1 class="title">Masukkan Data Pangkalan</h1>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Email</span>
+          <input type="email" ng-model="dft.email" placeholder="Masukkan Email">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Sandi</span>
+          <input type="password" ng-model="dft.pass" placeholder="Masukkan Sandi">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Nama</span>
+          <input type="text" ng-model="dft.nama" placeholder="Masukkan Nama">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">No. Tlp</span>
+          <input type="text" ng-model="dft.tlp" placeholder="Masukkan No. Tlp">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Harga/km</span>
+          <input type="text" ng-model="dft.hrg" placeholder="Masukkan Harga/KM">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Lokasi</span>
+          <input type="text" ng.model="dft.lks" id="dft.lks" disabled>
+        </label>
+        <div class="row">
+          <div class="col">             
+          <button class="button button-block button-royal" type="submit" ng-click="prc_dft()">Daftar</button>
+          </div>
+          <div class="col">
+          <button class="button button-block button-assertive" id="bMap">Kembali</button>
+          </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,146 @@
+/*bgr home*/
+.bg-img {
+    background: url('../img/bgr.jpg') no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-zoom: 50%;
+}
+/*input file css*/
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.btn {
+  border: 2px solid black;
+  color: black;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.upload-btn-wrapper input[type=file] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+/*map*/
+.scroll{
+  	height: 100%;
+}
+#map{
+  	width: 100%;
+  	height: 100%;
+}
+/*profil img*/
+.img-profil {
+  /*width: 50%;
+  height: 50%;*/
+  width: 150px !important;  
+  height : 150px !important;  
+  max-width: auto !important;  //any size
+  max-height: auto !important; //any size 
+  border: 5px solid white;
+  border-radius: 50%;
+}
+/*placeholder italic*/
+::-webkit-input-placeholder {
+   font-style: italic;
+}
+:-moz-placeholder {
+   font-style: italic;  
+}
+::-moz-placeholder {
+   font-style: italic;  
+}
+:-ms-input-placeholder {  
+   font-style: italic; 
+}
+/*seraching box modal map*/
+#cari{
+  margin-top: 5px;
+  border: 1px solid transparent;
+  border-radius: 2px 2px 2px 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 40px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  /*margin-left: 5px;*/
+  /*margin-right: 10px;*/
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 95%;
+}
+#cari:focus {
+  border-color: #4d90fe;
+}
+/*float button map*/
+
+.float-button {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 30px;
+  padding: 30px;
+  font-size: 40px;
+  background: $warning;
+  position: fixed;
+  bottom: 10px; /* Adjust to where you want it */
+  right: 280px; /* Adjust to where you want it */
+  z-index: 12;
+}
+
+.float-button .height_fix {
+  margin-top: 100%;
+}
+
+.float-button .content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: -20px; /* Note, this must be half the font size */
+  color: $light;
+}
+
+.float-button-lagi {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  width: 30px;
+  padding: 30px;
+  font-size: 40px;
+  background: $warning;
+  position: fixed;
+  bottom: 10px; /* Adjust to where you want it */
+  right: 50px; /* Adjust to where you want it */
+  z-index: 12;
+}
+
+.float-button-lagi .height_fix {
+  margin-top: 100%;
+}
+
+.float-button-lagi .content {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: -20px; /* Note, this must be half the font size */
+  color: $light;
+}

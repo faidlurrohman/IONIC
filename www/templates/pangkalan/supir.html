@@ -1,0 +1,19 @@
+<ion-view view-title="Supir Pangkalan">
+  	<ion-content>
+	  	<ion-list show-delete="data.showDelete">
+	        <ion-item ng-repeat="listSpr in supirTmp" item="item" ng-click="dtl_spr(listSpr.id)" class="item-remove-animate">
+			      <h2>{{listSpr.nama}}</h2>
+			      <p>{{listSpr.tlp}}</p>
+				    <ion-delete-button class="ion-minus-circled" ng-click="hapus(listSpr.id)"></ion-delete-button>
+	        </ion-item>
+	    </ion-list>
+  	</ion-content>
+    <ion-footer-bar class="bar-royal">
+    	<div class="buttons pull-left">
+        	<button class="button button-icon icon ion-minus-circled" ng-click="data.showDelete = !data.showDelete"></button>
+      	</div>
+      	<div class="buttons pull-right">
+        	<button class="button button-icon icon ion-plus-circled" ng-click="tmb_spr()"></button>
+      	</div>
+	</ion-footer-bar>
+</ion-view>
