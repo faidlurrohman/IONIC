@@ -1,0 +1,48 @@
+<ion-view view-title="Profil">
+    <ion-content>
+        <div class="upload-btn-wrapper">
+            <button class="btn">Edit Foto</button>
+            <input type="file" name="myfile" id="uploadFotoProfil"/>
+        </div>
+        <div id="content-profil">
+            <div id="profile-info">
+                <img id="profile-image" ng-src="{{foto_user}}">
+                <!-- <h3 id="profile-name">{{nama_user}}</h3> -->
+            </div>
+            <div class="list">
+                <div class="item item-divider item-positive">
+                    Nama
+                    <button class="button button-clear button-small btn-edit" ng-click="edt_nama()">Edit Nama</button>
+                </div>
+                <div class="item">
+                    {{nama_user}}
+                </div>
+                <div class="item item-divider item-positive">
+                    Email
+                    <button class="button button-clear button-small btn-edit" ng-click="edt_email()">Edit Email</button>
+                </div>
+                <div class="item">
+                    {{email_user}}
+                </div>
+                <div class="item item-divider item-positive">
+                    Alamat
+                    <button class="button button-clear button-small btn-edit" ng-click="edt_alamat()">Edit Alamat</button>
+                </div>
+                <div class="item">
+                    {{alamat_user}}
+                </div>
+            </div>
+        </div>
+        
+        <div class="list">
+            <div class="item item-divider item-positive">
+                List Data Upload
+            </div>
+            <a class="item item-thumbnail-left" ng-click="dtl_laka(listData.id)" ng-repeat="listData in infoLakaUser">
+                <img ng-src="{{listData.foto}}">
+                <h2>{{listData.judul}}</h2>
+                <p style="white-space: normal !important;">{{listData.lokasi}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

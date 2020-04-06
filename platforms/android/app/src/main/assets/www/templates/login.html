@@ -1,0 +1,22 @@
+<ion-view view-title="Login">
+    <ion-content class="padding">
+        <form name="frmLogin" novalidate ng-submit="frmLogin.$valid && login()">
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="Email" required minlength="1" ng-model="msk.email">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="Password" required minlength="6" ng-model="msk.password">
+                </label>
+                <button class="button button-block button-positive" type="submit" ng-disabled="!frmLogin.$valid">
+                    Masuk
+                </button>
+                <button class="button button-block button-balanced" ng-click="daftar()">
+                    Daftar
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,27 @@
+<ion-view view-title="Daftar">
+    <ion-content class="padding">
+        <form name="frmDaftar" novalidate ng-submit="frmDaftar.$valid && daftar()">
+            <div class="list">
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Nama</span>
+                    <input type="text" placeholder="Nama" required minlength="1" ng-model="dft.nama">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Alamat</span>
+                    <input type="text" placeholder="Alamat" required minlength="1" ng-model="dft.alamat">
+                </label>
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Email</span>
+                    <input type="email" placeholder="Email" required minlength="1" ng-model="dft.email">
+                </label>    
+                <label class="item item-input item-stacked-label">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="Password" required minlength="6" ng-model="dft.password">
+                </label>
+                <button class="button button-block button-balanced" type="submit" ng-disabled="!frmDaftar.$valid">
+                    Daftar
+                </button>
+            </div>
+        </form>
+    </ion-content>
+</ion-view>

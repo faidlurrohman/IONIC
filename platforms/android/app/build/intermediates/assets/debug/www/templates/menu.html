@@ -1,0 +1,36 @@
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-positive">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close href="#/app/daftar-kecelakaan">
+          Daftar Kecelakaan
+        </ion-item>
+        <ion-item menu-close ng-show="mapSidemenu" href="#/app/map">
+          Map
+        </ion-item>
+        <ion-item menu-close ng-show="profilSidemenu" href="#/app/profil">
+          Profil
+        </ion-item>
+        <ion-item menu-close ng-show="loginSidemenu" href="#/app/login">
+          Login
+        </ion-item>
+        <ion-item menu-close ng-show="logoutSidemenu" ng-click="logout()">
+          Logout
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

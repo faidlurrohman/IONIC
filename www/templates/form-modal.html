@@ -1,0 +1,48 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-positive">
+    <h1 class="title">Form Tambah Berita</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="cancelForm()">Kembali</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form name="formTambah" id="formTambah" novalidate ng-submit="formTambah.$valid && tmbData()">
+      <div class="list">
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Judul</b></span>
+          <input type="text" placeholder="Judul Berita" required minlength="3" id="tmb_jdl" ng-model="tmb_jdl">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Lokasi</b></span>
+          <input type="text" id="tmb_lat" ng-model="tmb_lat" style="display: none;">
+          <input type="text" id="tmb_long" ng-model="tmb_long" style="display: none;">
+          <textarea type="text" id="tmb_lks" ng-model="tmb_lks" rows="4" style="background-color: transparent !important;" disabled></textarea>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Keterangan Korban</b></span>
+          <input type="text" placeholder="Keterangan Korban" required minlength="3" id="tmb_ketKorban" ng-model="tmb_ketKorban">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Keterangan Pelapor</b></span>
+          <input type="text" id="tmb_pelapor" ng-model="tmb_pelapor" style="background-color: transparent !important;" disabled>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Keterangan Saksi</b></span>
+          <input type="text" id="tmb_saksi" placeholder="Keterangan Saksi" required minlength="3" ng-model="tmb_saksi">
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Deskripsi Kecelakaan</b></span>
+          <textarea style="height: 40%;" id="tmb_des" placeholder="Deskripsi" required minlength="3" ng-model="tmb_des" rows="4"></textarea>
+        </label>
+        <label class="item item-input item-stacked-label">
+          <span class="input-label"><b>Foto</b></span>
+          <div class="form-btn-wrapper">
+            <button class="btn-form">Upload Foto</button>
+            <input type="file" name="myfile" id="tmb_foto"/>
+          </div>
+        </label>
+        <button class="button button-full button-positive" type="submit" ng-disabled="!formTambah.$valid">OK</button>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
