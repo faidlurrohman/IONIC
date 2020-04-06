@@ -1,0 +1,47 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-royal">
+    <h1 class="title">Chat</h1>
+    <button class="button button-clear button-positive" ng-click="cancel();">
+      <a class="button icon-left ion-backspace-outline button-clear"></a>
+    </button>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="list" ng-repeat="listChat in chatTmp" style="margin-bottom: 0px;">
+      <!-- kiri -->
+      <div class="row" ng-if="listChat.sender==userIdLog" style="width: 85%; padding: 5px; float: left;">
+        <!-- <div class="col item-avatar">
+          <img src="{{imgChatUser}}" style="top: 0px; left: 0px; max-width: 30px; max-height: 30px; position: relative;">
+        </div> -->
+        <div class="col">
+          <div class="talk-bubble-left tri-right round left-top">
+            <div class="talktext-left">
+              <p>{{listChat.chat}}</p>
+              <ul>{{listChat.jam}}</ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- kanan -->
+      <div class="row" ng-if="listChat.sender!=userIdLog" style="width: 85%; padding: 5px; float: right;">
+        <div class="col">
+          <div class="talk-bubble-right tri-right round right-top">
+            <div class="talktext-right">
+              <p>{{listChat.chat}}</p>
+              <ul>{{listChat.jam}}</ul>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="col item-avatar">
+          <img src="{{imgChatNotUser}}" style="top: 0px; left: 12px; max-width: 30px; max-height: 30px; position: relative;">
+        </div> -->
+      </div>
+    </div>
+  </ion-content>
+  <div class="bar bar-footer bar-royal item-input-inset">
+    <label class="item-input-wrapper">
+      <input type="text" ng-model="dtlIdPsn" style="display: none;">
+      <input type="text" placeholder="Masukkan Pesan" ng-model="chat.dtlChat">
+    </label>
+    <button class="button button-clear" ng-click="krm_chat(chat)">Kirim</button>
+  </div>
+</ion-modal-view>

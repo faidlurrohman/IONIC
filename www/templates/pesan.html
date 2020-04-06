@@ -1,0 +1,59 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-energized">
+    <h1 class="title">Pesanan Anda</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="mdl_psn.hide();">Kembali</button>
+    </div>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <form ng-submit="prs_psn(choice)">
+      <div class="list">
+        <div class="item item-divider">
+          Detail Pesanan Anda
+        </div>
+        <a class="item" ng-click="dtl_awal()">
+          <h2>Lokasi :</h2>
+          <p style="white-space: normal; width: fit-content;">{{lks_awal}}</p>
+        </a>
+        <a class="item" ng-click="dtl_tjn()">
+          <h2>Tujuan :</h2>
+          <p style="white-space: normal; width: fit-content;">{{lks_tjn}}</p>
+        </a>
+        <a class="item">
+          <h2>Jarak Tempuh :</h2>
+          <p>{{ttlKm}}</p>
+        </a>
+        <a class="item">
+          <h2>Total Harga :</h2>
+          <p>Rp. {{ttlHrg | number}}</p>
+        </a>
+      </div>
+      <div class="list">
+        <div class="item item-divider">
+          Pangkalan Ojek
+        </div>
+        <a class="item">
+          <h2>Nama :</h2>
+          <p>{{nmPkl}}</p>
+        </a>
+        <a class="item">
+          <h2>Harga/KM :</h2>
+          <p>Rp. {{HrgNearPkl | number}}</p>
+        </a>
+        <div class="item item-divider">
+          Daftar Supir Ojek
+        </div>
+        <ion-list ng-repeat="listSpr in supirTmp" ng-click="dtl_spr(listSpr.id)" >
+          <ion-radio ng-model="choice.val" ng-value="'{{listSpr.id}}'">
+            {{listSpr.nama}}
+          </ion-radio>
+        </ion-list>
+      </div>
+      <input type="text" ng-model="id_pnp" style="display: none;">
+      <input type="text" ng-model="lks_awal" style="display: none;">
+      <input type="text" ng-model="lks_tjn" style="display: none;">
+      <input type="text" ng-model="ttlHrg" style="display: none;">
+      <button class="button button-block button-assertive">Pesan</button>
+    </form>
+  </ion-content>
+</ion-modal-view>

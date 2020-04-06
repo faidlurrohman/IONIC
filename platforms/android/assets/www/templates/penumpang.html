@@ -1,0 +1,37 @@
+<ion-view view-title="Penumpang" cache-view="false">
+  	<ion-content scroll="false">
+      <center ng-show="loadingMap" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <ion-spinner icon="crescent" class="spinner spinner-crescent spinner-energized"></ion-spinner>
+        <br/><h6 style="color: #ffc900;">Sedang Memuat...</h6>
+      </center>
+      <div id="cont_map" ng-show="showMap">
+      	<input id="origin-input" ngChange="disableTap()" data-tap-disabled="true" type="text" placeholder="Lokasi Anda">
+      	<input id="destination-input" ngChange="disableTap()" data-tap-disabled="true" type="text" placeholder="Tujuan Anda">
+      	<div class="float-button">
+  		    <span class="height-fix">
+  		       	<button id="fab-profile" class="button button-fab button-fab-bottom-right fab-fixed button-assertive pane" nav-view="active" style="opacity: 1; transform: translate3d(0%, 0px, 0px);" ng-click="pesan()">
+  		         	<i class="icon ion-plus"></i>
+  		       	</button>
+  		    </span>
+    		</div>
+        <div id="map" data-tap-disabled="true"></div>
+      </div>
+      <div class="container-error" ng-show="showError" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="row">
+          <div class="col">
+            <center>
+              <h3 style="color: #ef473a;">
+                <b>Oops!</b>
+              </h3>
+              <img src="img/sad.png" style="max-width: 200px; max-height: 200px;">
+              <h5>
+                <button class="button button-small button-assertive" ng-click="reloadMapPage()">
+                  Coba Lagi
+                </button>
+              </h5>
+            </center>
+          </div>
+        </div>
+      </div>
+   	</ion-content>
+</ion-view>

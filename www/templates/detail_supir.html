@@ -1,0 +1,36 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-energized">
+    <h1 class="title">Detail Supir</h1>
+    <button class="button button-clear button-positive" ng-click="mdl_dtlSpr.remove();">
+      <a class="button icon-left ion-backspace-outline button-clear"></a>
+    </button>
+  </ion-header-bar>
+  <ion-content class="padding" scroll="false">
+    <center>
+      <div class="col">
+        <img class="img-profil" src="{{dtl_img}}">
+      </div>
+    </center>
+    <div class="list">
+      <a class="item">
+        <h2><b>Nama</b></h2>
+        <p>{{dtl_nama}}</p>
+      </a>
+      <a class="item">
+        <h2><b>Email</b></h2>
+        <p>{{dtl_email}}</p>
+      </a>
+      <a class="item">
+        <h2><b>No. Tlp</b></h2>
+        <p>{{dtl_tlp}}</p>
+      </a>
+      <a class="item item-button-right">
+        <h2><b>Jenis Kendaraan</b></h2>
+        <p>{{dtl_kdr}}</p>
+        <button class="button button-clear button-positive" ng-click="lht_kdr()">
+          <i class="icon ion-ios-eye"></i>
+        </button>
+      </a>
+    </div>
+  </ion-content>
+</ion-modal-view>

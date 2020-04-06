@@ -1,0 +1,51 @@
+<ion-modal-view>
+  <ion-header-bar class="bar bar-header bar-royal">
+    <h1 class="title">Detail Pesanan</h1>
+    <button class="button button-clear button-positive" ng-click="cancel();">
+      <a class="button icon-left ion-backspace-outline button-clear"></a>
+    </button>
+  </ion-header-bar>
+  <ion-content class="padding">
+    <div class="list">
+      <!-- <div class="item item-divider">
+        <b>Tanggal</b>
+      </div>
+      <a class="item">
+        <p>{{dtlPsn_tgl}}</p>
+      </a> -->
+      <div class="item item-divider">
+        <b>Rute</b>
+      </div>
+      <a class="item">
+        <h3>Lokasi :</h3>
+        <p style="white-space: normal; width: fit-content;">{{dtlPsn_lks}}</p>
+      </a>
+      <a class="item">
+        <h3>Tujuan :</h3>
+        <p style="white-space: normal; width: fit-content;">{{dtlPsn_tjn}}</p>
+      </a>
+      <a class="item">
+        <h3>Harga :</h3>
+        <p>Rp. {{dtlPsn_hrg | number}}</p>
+      </a>
+      <div class="item item-divider item-icon-right">
+        <b>Supir Ojek</b>
+      </div>
+      <a class="item item-thumbnail-left">
+        <img src="{{dtlPsn_imgSpr}}">
+        <h4>Nama :</h4>
+        <p>{{dtlPsn_nmSpr}}</p>
+        <h4>No. Telepon :</h4>
+        <p>{{dtlPsn_tlpSpr}}</p>
+        <span class="item-note">
+          <button class="button button-clear button-small button-calm" ng-click="dtlPsn_spr(tmp_spr)">
+            Lihat Detail
+          </button>
+        </span>
+      </a>
+      <button class="button button-small button-block button-royal" ng-if="dtlPsn_sts=='true'" ng-click="psn_sls(dtlPsn_id)">
+        <i class="icon ion-checkmark">&nbsp;&nbsp;<b>PESANAN SELESAI</b></i>
+      </button>
+    </div>
+  </ion-content>
+</ion-modal-view>
