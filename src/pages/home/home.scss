@@ -1,0 +1,32 @@
+.md {
+    page-home {
+        ion-navbar {
+            .toolbar-background-md {
+                border-color: #b2b2b2;
+                background: #fff !important;
+            }
+            ion-title {
+                // font-family: 'Lora' !important;
+            }
+        }
+        ion-col {
+            // margin-bottom: 15px !important;
+        }
+        h6 {
+            color: #2B38B9;
+            font-size: 1.4rem;
+            // font-family: 'Lora' !important;
+        }
+        .contImg {
+            margin: 3%;
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0px 8px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 5%;
+            background-size: cover;
+            background-position: center;
+            min-height: 150px;
+        }
+        .button-inner {
+            // font-family: 'Lora' !important;
+        }
+    }
+}

@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar text-center>
+    <ion-title><b>Pondok Pesantren<br>Al-Jihad Surabaya</b></ion-title>
+  </ion-navbar>
+  <ion-segment [(ngModel)]="ktgVote">
+    <ion-segment-button value="total">Total</ion-segment-button>
+    <ion-segment-button value="kamar">Perkamar</ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <div [ngSwitch]="ktgVote">
+    <ion-list *ngSwitchCase="'total'">
+      <ion-grid padding>
+        <ion-row>
+          <ion-col col-6 col-md-4 col-xl-3 text-center>
+            <div class="contImg" [style.background-image]="'url(assets/calon/calon1.jpeg)'">
+            </div>
+            <ion-item no-lines text-center>
+              <ion-badge color="color1">{{vote1}} Voter</ion-badge>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6 col-md-4 col-xl-3 text-center>
+            <div class="contImg" [style.background-image]="'url(assets/calon/calon2.jpeg)'">
+            </div>
+            <ion-item no-lines text-center>
+              <ion-badge color="color1">{{vote2}} Voter</ion-badge>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6 col-md-4 col-xl-3 text-center>
+            <div class="contImg" [style.background-image]="'url(assets/calon/calon3.jpeg)'">
+            </div>
+            <ion-item no-lines text-center>
+              <ion-badge color="color1">{{vote3}} Voter</ion-badge>
+            </ion-item>
+          </ion-col>
+          <ion-col col-6 col-md-4 col-xl-3 text-center>
+            <div class="contImg" [style.background-image]="'url(assets/calon/calon4.jpeg)'">
+            </div>
+            <ion-item no-lines text-center>
+              <ion-badge color="color1">{{vote4}} Voter</ion-badge>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+    <ion-list *ngSwitchCase="'kamar'">
+      <ion-item-group *ngFor="let item of displayHsl">
+        <ion-item-divider color="light">
+          <b style="font-variant: all-petite-caps; font-size: 1.5rem;">kamar {{item.kmr}}</b>
+        </ion-item-divider>
+        <ion-item>
+          <b style="font-variant: all-petite-caps; font-size: 1.5rem;">Calon 1</b>
+          <ion-badge color="color1" item-end>{{item.calon1}} Voter</ion-badge>
+        </ion-item>
+        <ion-item>
+            <b style="font-variant: all-petite-caps; font-size: 1.5rem;">Calon 2</b>
+          <ion-badge color="color1" item-end>{{item.calon2}} Voter</ion-badge>
+        </ion-item>
+        <ion-item>
+            <b style="font-variant: all-petite-caps; font-size: 1.5rem;">Calon 3</b>
+          <ion-badge color="color1" item-end>{{item.calon3}} Voter</ion-badge>
+        </ion-item>
+        <ion-item>
+            <b style="font-variant: all-petite-caps; font-size: 1.5rem;">Calon 4</b>
+          <ion-badge color="color1" item-end>{{item.calon4}} Voter</ion-badge>
+        </ion-item>
+      </ion-item-group>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,21 @@
+.md {
+    page-about {
+        ion-navbar {
+            .toolbar-background-md {
+                border-color: #b2b2b2;
+                background: #fff !important;
+            }
+            // ion-title {
+            //     font-family: 'Lora' !important;
+            // }
+        }
+        .contImg {
+            margin: 3%;
+            box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0px 5px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 5%;
+            background-size: cover;
+            background-position: center;
+            min-height: 150px;
+        }
+    }
+}
