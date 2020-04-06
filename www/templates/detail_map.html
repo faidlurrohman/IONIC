@@ -1,0 +1,17 @@
+<ion-modal-view>
+	<ion-header-bar class="bar bar-header bar-royal">
+  	<h1 class="title">Rute Map Pesanan</h1>
+  	<button class="button button-clear button-positive" ng-click="mdl_dtlMap.remove();">
+  		<a class="button icon-left ion-backspace-outline button-clear"></a>
+  	</button>
+	</ion-header-bar>
+	<ion-content class="padding" scroll="false">
+	<div id="map" data-tap-disabled="true"></div>
+	<button id="btnStart" ng-if="cekStatusSupir==1 && cekStatusPesanan=='true'" class="button button-block button-balanced" ng-click="eventBtnMulai()">
+  	Mulai
+	</button>
+  <button id="btnStart" ng-if="cekStatusSupir==2 && cekStatusPesanan=='true'" class="button button-block button-assertive" ng-click="eventBtnSelesai()">
+    Selesai
+  </button>
+	</ion-content>
+</ion-modal-view>

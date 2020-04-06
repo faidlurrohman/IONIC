@@ -1,0 +1,39 @@
+<ion-view view-title="Pesanan Penumpang">
+	<ion-content>
+		<ion-list>
+      <ion-item ng-repeat="listPsn in dftPsn" item="item">
+        <p style="float: right;">{{listPsn.tanggal}}</p>
+        <br>
+        <a class="item item-thumbnail-left" style="border: none; width: 100%; padding-left: 100px;">
+          <img src="{{dtlPsn_imgPnp}}" style="left: 0px;">
+          <p>Nama :</p>
+          <h2>{{dtlPsn_nmPnp}}</h2>
+          <p>No. Telepon :</p>
+          <h2>{{dtlPsn_tlpPnp}}</h2>
+        </a>
+        <h3><b>Lokasi :</b></h3>
+      	<p style="white-space: normal; width: fit-content;">{{listPsn.lokasi}}</p>
+        <h3><b>Tujuan :</b></h3>
+      	<p style="white-space: normal; width: fit-content;">{{listPsn.tujuan}}</p>
+        <h3><b>Harga :</b></h3>
+        <p>Rp. {{listPsn.harga | number}}</p>
+        <input type="text" ng-model="dtlPsn_lks" style="display: none;">
+        <input type="text" ng-model="dtlPsn_tjn" style="display: none;">
+        <div class="row" style="padding: 0px;">
+          <div class="col col-45" style="padding: 0px;" ng-if="listPsn.status=='true'">
+            <button class="button button-small button-block button-balanced" ng-click="chat_psn(listPsn.id_pesanan)">
+              <i class="icon ion-chatbubble-working">&nbsp;&nbsp;<b>CHAT</b></i>
+            </button>
+          </div>
+          <div class="col col-10" style="padding: 0px;" ng-if="listPsn.status=='true'">
+          </div>
+          <div class="col col-45" style="padding: 0px;" style="padding: 0px;">
+            <button class="button button-small button-block button-positive" ng-click="dtl_map()">
+              <b>LIHAT RUTE</b>&nbsp;&nbsp;<i class="icon ion-arrow-right-c"></i>
+            </button>
+          </div>
+        </div>
+      </ion-item>
+    </ion-list>
+	</ion-content>
+</ion-view>

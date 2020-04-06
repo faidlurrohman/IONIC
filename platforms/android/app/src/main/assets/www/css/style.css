@@ -1,0 +1,165 @@
+/* Empty. Add your own CSS if you like */
+
+/*map*/
+.scroll{
+  	height: 100%;
+}
+#map{
+  	width: 100%;
+  	height: 90%;
+}
+
+  /*input file css*/
+  .upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .btn {
+    border: 2px solid black;
+    color: black;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+  }
+
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }
+  /*profil img*/
+  .img-profil {
+    /*width: 50%;
+    height: 50%;*/
+    width: 150px !important;
+    height : 150px !important;
+    max-width: auto !important;  //any size
+    max-height: auto !important; //any size
+    border: 5px solid white;
+    border-radius: 50%;
+  }
+
+/*chat*/
+.round{
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+}
+/*chat kiri*/
+.talk-bubble-left {
+  /*margin: 40px;*/
+  float: left;
+  margin-bottom: 2px;
+  display: inline-block;
+  position: relative;
+  /*width: 200px;*/
+  height: auto;
+  background-color: #886aea;
+}
+/* talk bubble contents */
+.talktext-left{
+  padding: 1em;
+  text-align: left;
+  line-height: 1.5em;
+}
+.talktext-left p{
+  /* remove webkit p margins */
+  color: white;
+  font-size: small;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+.talktext-left ul{
+  /* remove webkit p margins */
+  color: white;
+  float: right;
+  font-size: xx-small;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+.tri-right.border.left-top:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -40px;
+  right: auto;
+  top: -8px;
+  bottom: auto;
+  border: 32px solid;
+  border-color: #666 transparent transparent transparent;
+}
+.tri-right.left-top:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -15px;
+  right: auto;
+  top: 10px;
+  bottom: auto;
+  border: 15px solid;
+  border-color: #886aea transparent transparent transparent;
+}
+/*chat kanan*/
+.talk-bubble-right {
+  /*margin: 40px;*/
+  float: right;
+  margin-bottom: 2px;
+  display: inline-block;
+  position: relative;
+  /*width: 200px;*/
+  height: auto;
+  background-color: #33cd5f;
+}
+/* talk bubble contents */
+.talktext-right{
+  padding: 1em;
+  text-align: left;
+  line-height: 1.5em;
+}
+.talktext-right p{
+  /* remove webkit p margins */
+  color: white;
+  font-size: small;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+.talktext-right ul{
+  /* remove webkit p margins */
+  color: white;
+  float: right;
+  font-size: xx-small;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+}
+.tri-right.border.right-top:before {
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: -40px;
+  right: auto;
+  top: -8px;
+  bottom: auto;
+  border: 32px solid;
+  border-color: #666 transparent transparent transparent;
+}
+.tri-right.right-top:after{
+  content: ' ';
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: auto;
+  right: -15px;
+  top: 10px;
+  bottom: auto;
+  border: 15px solid;
+  border-color: #33cd5f transparent transparent transparent;
+}

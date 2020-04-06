@@ -1,0 +1,36 @@
+<ion-view view-title="Beranda">
+  	<ion-content>
+  		<div class="row responsive-sm">
+		  	<div class="col">
+		  		<!-- <div class="list card">
+				  	<div class="item item-divider">
+					    Nama Anda:
+				  	</div>
+				  	<ion-item ng-click="profil()" class="item">
+					    {{sprNamaBrd}}
+					    <span class="item-note" style="font-style:italic">
+					      	Lebih detail...
+					    </span>
+					  </ion-item>
+				  </div> -->
+		  		<div class="list card">
+				  	<div class="item item-divider">
+					    Deposit Anda:
+				  	</div>
+				  	<ion-item ng-click="deposit()" class="item">
+					    Rp. {{sprDepositBrd | number}}
+					    <span class="item-note" style="font-style:italic">
+					      	Klik tambah deposit...
+					    </span>
+					  </ion-item>
+				  </div>
+		  		<div class="list card">
+				  	<ion-item ng-click="pesanan()" class="item">
+					    Pesanan Penumpang:
+    					<span class="badge badge-assertive">{{jmlPsnBrd}}</span>
+					  </ion-item>
+				  </div>
+		  	</div>
+		</div>
+	</ion-content>
+</ion-view>

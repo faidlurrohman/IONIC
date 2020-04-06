@@ -1,0 +1,43 @@
+<ion-view view-title="Profil Anda">
+  	<ion-content padding="true">
+      <center>
+        <div class="col">
+          <img class="img-profil" src="{{sprImg}}">
+        </div>
+        <div class="upload-btn-wrapper">
+          <button class="btn">Upload a file</button>
+          <input type="file" name="myfile" id="fileButton"/>
+        </div>
+      </center>
+	  	<div class="list">
+	  		<div class="item item-divider">
+	  			<!-- <i class="icon ion-eye"></i> -->
+		    	Nama :
+		  	</div>
+		  	<a class="item" ng-click="edt_nama()">
+		    	{{sprNama}}
+		  	</a>
+	  		<div class="item item-divider">
+	  			<!-- <i class="icon ion-at"></i> -->
+		    	Email :
+		  	</div>
+		  	<a class="item" ng-click="edt_email()">
+		    	{{sprEmail}}
+		  	</a>
+	  		<div class="item item-divider">
+	  			<!-- <i class="icon ion-locked"></i> -->
+		    	Sandi :
+		  	</div>
+		  	<a class="item" ng-click="edt_pass()">
+          <input type="password" value="{{sprPass}}" style="background: #fff;" disabled>
+		  	</a>
+	  		<div class="item item-divider">
+	  			<!-- <i class="icon ion-iphone"></i> -->
+		    	No. Telepon :
+		  	</div>
+		  	<a class="item" ng-click="edt_tlp()">
+		    	{{sprTlp}}
+		  	</a>
+		</div>
+	</ion-content>
+</ion-view>
