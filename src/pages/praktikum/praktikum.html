@@ -1,0 +1,149 @@
+<ion-content padding>
+  <div class="headerApp">
+    <div class="boxLogo">
+      <img src="assets/imgs/unesa.png" class="lgApp">
+    </div>
+    <div class="boxJdl">
+      <p class="jdlApp">PRAKTIKUM</p>
+    </div>
+    <div class="boxBtn">
+        <img src="assets/imgs/mute.png" class="btnApp" (click)="soundOn()" [class.hide]="onSound">
+        <img src="assets/imgs/speaker.png" class="btnApp" (click)="soundOff()" [class.hide]="offSound">
+      <img src="assets/imgs/power-off.png" class="btnApp" (click)="keluar()">
+    </div>
+  </div>
+  <ion-grid>
+      <ion-row>
+        <ion-col col-4 class="contBtn">
+          <img src="assets/imgs/praktikum/prkTjn.png" class="btnPrk" (click)="prk1()">
+          <img src="assets/imgs/praktikum/prkAlat.png" class="btnPrk" (click)="prk2()">
+          <img src="assets/imgs/praktikum/prkBahan.png" class="btnPrk" (click)="prk3()">
+          <img src="assets/imgs/praktikum/prkProsedur.png" class="btnPrk" (click)="prk4()">
+          <img src="assets/imgs/praktikum/prkHasil.png" class="btnPrk" (click)="prk5()">
+          <img src="assets/imgs/praktikum/prkAnalis.png" class="btnPrk" (click)="prk6()">
+          <img src="assets/imgs/praktikum/prkKesimpulan.png" class="btnPrk" (click)="prk7()">
+        </ion-col>
+        <ion-col col-8 class="cont" [class.hide]="prkPertama" text-center>
+          <h6 style="margin-top: 20%; text-align: center;">
+            Mengetahui pengaruh luas permukaan terhadap laju reaksi suatu zat.
+          </h6>
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+        <ion-col col-8 class="cont" [class.hide]="prkKedua" text-center>
+          <ion-row>
+            <ion-col col-3 text-center>
+              <img src="assets/imgs/alat/kaca_arloji.jpg" class="alat1">
+              <h6 style="font-size: 1.2rem; margin-top: 0; text-align: center;">
+                Kaca Arloji
+              </h6>
+            </ion-col>  
+            <ion-col col-3 text-center>
+              <img src="assets/imgs/alat/mortar_alu.jpg" class="alat2">
+              <h6 style="font-size: 1.2rem; margin-top: 0; text-align: center;">
+                Mortar dan Alu
+              </h6>
+            </ion-col>  
+            <ion-col col-3 text-center style="align-self:flex-end;">
+              <img src="assets/imgs/alat/pipet_tetes.jpg" class="alat3">
+              <h6 style="font-size: 1.2rem; margin-top: 0; text-align: center;">
+                Pipet Tetes
+              </h6>
+            </ion-col>  
+            <ion-col col-3 text-center style="align-self:flex-end;">
+              <img src="assets/imgs/alat/spatula.png" class="alat4">
+              <h6 style="font-size: 1.2rem; margin-top: 0; text-align: center;">
+                Spatula
+              </h6>
+            </ion-col>  
+          </ion-row>
+          <ion-row>
+            <ion-col col-4 text-center>
+              <img src="assets/imgs/alat/gelas_ukur.jpg" class="alat6">
+              <h6 style="font-size: 1.2rem; margin-top: 0; text-align: center;">
+                Gelas Ukur 10 mL
+              </h6>
+            </ion-col>  
+            <ion-col col-4 text-center>
+              <img src="assets/imgs/alat/gelas_kimia.png" class="alat5">
+              <h6 style="font-size: 1.2rem; margin-top: 0; text-align: center;">
+                Gelas Kimia 100 mL
+              </h6>
+            </ion-col>  
+            <ion-col col-4 text-center>
+              <img src="assets/imgs/alat/erlenmeyer.png" class="alat7">
+              <h6 style="font-size: 1.2rem; margin-top: 0; text-align: center;">
+                Erlenmeyer 100 mL
+              </h6>
+            </ion-col>  
+          </ion-row>
+          <button ion-button small color="peach" class="btnAlat" (click)="lhtVideoAlat()">Lihat Video</button>
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+        <ion-col col-8 class="cont" [class.hide]="prkKetiga" text-center>
+          <ion-row>
+            <ion-col col-4 text-center>
+              <img src="assets/imgs/bahan/redoxon.png" class="bahan1">
+              <h6 style="font-size: 1.2rem; margin-top: 0; text-align: center;">
+                Redoxon
+              </h6>
+            </ion-col>  
+            <ion-col col-4 text-center style="align-self: center;">
+              <img src="assets/imgs/bahan/balon.png" class="bahan2">
+              <h6 style="font-size: 1.2rem; margin-top: 0; text-align: center;">
+                Balon
+              </h6>
+            </ion-col>  
+            <ion-col col-4 text-center>
+              <img src="assets/imgs/bahan/aquades.png" class="bahan3">
+              <h6 style="font-size: 1.2rem; margin-top: 0; text-align: center;">
+                Aquades
+              </h6>
+            </ion-col>
+          </ion-row>
+          <button ion-button small color="peach" class="btnBahan" (click)="lhtVideoBahan()">Lihat Video</button>
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+        <ion-col col-8 class="cont" [class.hide]="prkKeempat" text-center>
+          <video #prosedur style="max-width: 85%;" controls>
+            <source src="assets/video/prosedur.mp4" type="video/mp4">
+          </video>
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+        <ion-col col-8 class="cont" [class.hide]="prkKelima" text-center>
+          <img src="assets/imgs/praktikum/hasil_pengamatan.png" class="imgPengamatan" style="margin-top: 15%;">
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+        <ion-col col-8 class="cont" [class.hide]="prkKeenam" text-center>
+          <h6 style="text-align: center; margin-top: 5%;">
+            Pada percobaan yang dilakukan, diperoleh hasil bahwa waktu yang diperlukan untuk menegakkan balon menggunakan bahan redoxon berbentuk serbuk lebih cepat daripada menggunakan redoxon berbentuk tablet utuh. Hal tersebut disebabkan karena pada bentuk serbuk, luas permukaan bidang sentuh zat untuk bereaksi dengan air semakin besar sehingga reaksi dapat berjalan lebih cepat. Hal tersebut dapat dibuktikan dengan menegaknya balon pada percobaan ini.
+          </h6>
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+        <ion-col col-8 class="cont" [class.hide]="prkKetuju" text-center>
+          <h6 style="margin-top: 20%; text-align: center;">
+            Luas permukaan dapat memengaruhi laju reaksi semakin besar luas permukaan bidang sentuh, semakin besar pula laju reaksinya.
+          </h6>
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+        <ion-col col-8 class="cont" [class.hide]="videoAlat" text-center>
+          <video #alat style="max-width: 85%;" controls>
+            <source src="assets/video/alat.mp4" type="video/mp4">
+          </video>
+          <img src="assets/imgs/back.png" class="icnBtnFooter1" (click)="bAlat()">
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+        <ion-col col-8 class="cont" [class.hide]="videoBahan" text-center>
+          <video #bahan style="max-width: 85%;" controls>
+            <source src="assets/video/bahan.mp4" type="video/mp4">
+          </video>
+          <img src="assets/imgs/back.png" class="icnBtnFooter1" (click)="bBahan()">
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+      </ion-row>
+      <!-- <ion-row>
+        <ion-col col-12>
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+      </ion-row> -->
+  </ion-grid>
+</ion-content>

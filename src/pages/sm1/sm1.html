@@ -1,0 +1,69 @@
+<ion-content padding>
+  <div class="headerApp">
+    <div class="boxLogo">
+      <img src="assets/imgs/unesa.png" class="lgApp">
+    </div>
+    <div class="boxJdl">
+      <p class="jdlApp">MATERI - SUB MATERI</p>
+    </div>
+    <div class="boxBtn">
+      <img src="assets/imgs/mute.png" class="btnApp" (click)="soundOn()" [class.hide]="onSound">
+      <img src="assets/imgs/speaker.png" class="btnApp" (click)="soundOff()" [class.hide]="offSound">
+      <img src="assets/imgs/power-off.png" class="btnApp" (click)="keluar()">
+    </div>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="cont">
+        <ion-slides>
+          <ion-slide>
+            <img src="assets/imgs/pengertian/pengertian1.png" style="max-width: 100% !important;">
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/imgs/pengertian/pengertian2.png" style="max-width: 85% !important;">
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/imgs/pengertian/pengertian3.png" style="max-width: 90% !important;">
+          </ion-slide>
+          <ion-slide>
+            <img src="assets/imgs/pengertian/pengertian4.png" style="max-width: 70% !important;">
+          </ion-slide>
+        </ion-slides>
+        <!-- <ion-row [class.hide]="isiPertama">
+          <ion-col col-12 text-center>
+            <img src="assets/imgs/pengertian/pengertian1.png" class="p1Img">
+          </ion-col>
+        </ion-row>
+        <ion-row [class.hide]="isiKedua">
+          <ion-col col-12 text-center>
+            <img src="assets/imgs/pengertian/pengertian2.png" class="p2Img">
+          </ion-col>
+        </ion-row>
+        <ion-row [class.hide]="isiKetiga">
+          <ion-col col-12 text-center>
+            <img src="assets/imgs/pengertian/pengertian3.png" class="p3Img">
+          </ion-col>
+        </ion-row>
+        <ion-row [class.hide]="isiKeempat">
+          <ion-col col-12 text-center>
+            <img src="assets/imgs/pengertian/pengertian4.png" class="p4Img">
+          </ion-col>
+        </ion-row> -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <img src="assets/imgs/back.png" class="icnBtnFooter1" (click)="subMateri()">
+        <!-- <img src="assets/imgs/back.png" class="icnBtnFooter1" [class.hide]="backPertama" (click)="satu()">
+        <img src="assets/imgs/back.png" class="icnBtnFooter1" [class.hide]="backKedua" (click)="dua()">
+        <img src="assets/imgs/back.png" class="icnBtnFooter1" [class.hide]="backKetiga" (click)="tiga()">
+        <img src="assets/imgs/next.png" class="icnBtnFooter2" [class.hide]="tjnKedua" (click)="dua()">
+        <img src="assets/imgs/next.png" class="icnBtnFooter2" [class.hide]="tjnKetiga" (click)="tiga()">
+        <img src="assets/imgs/next.png" class="icnBtnFooter2" [class.hide]="tjnKeempat" (click)="empat()"> -->
+      </ion-col>
+      <ion-col col-6>
+        <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

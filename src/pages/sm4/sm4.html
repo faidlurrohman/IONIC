@@ -1,0 +1,46 @@
+<ion-content padding>
+    <div class="headerApp">
+      <div class="boxLogo">
+        <img src="assets/imgs/unesa.png" class="lgApp">
+      </div>
+      <div class="boxJdl">
+        <p class="jdlApp">MATERI - SUB MATERI</p>
+      </div>
+      <div class="boxBtn">
+          <img src="assets/imgs/mute.png" class="btnApp" (click)="soundOn()" [class.hide]="onSound">
+          <img src="assets/imgs/speaker.png" class="btnApp" (click)="soundOff()" [class.hide]="offSound">
+        <img src="assets/imgs/power-off.png" class="btnApp" (click)="keluar()">
+      </div>
+    </div>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="cont">
+          <ion-slides>
+            <ion-slide>
+              <img src="assets/imgs/faktor/faktor1.png" style="max-width: 70% !important;">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/faktor/faktor2.png" style="max-width: 100% !important;">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/faktor/faktor3.png" style="max-width: 75% !important;">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/faktor/faktor4.png" style="max-width: 80% !important;">
+            </ion-slide>
+            <ion-slide>
+              <img src="assets/imgs/faktor/faktor5.png" style="max-width: 75% !important;">
+            </ion-slide>
+          </ion-slides>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <img src="assets/imgs/back.png" class="icnBtnFooter1" (click)="subMateri()">
+        </ion-col>
+        <ion-col col-6>
+          <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>

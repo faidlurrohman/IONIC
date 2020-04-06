@@ -1,0 +1,115 @@
+page-submateri {
+
+    .scroll-content {
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+
+    ion-row {
+        flex: 1;
+    }
+
+    //header
+    .headerApp {
+        background-color: peachpuff;
+        width: 100% !important;
+        display: inline-flex;
+        .boxLogo {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .lgApp {
+                max-width: 40%;
+            }
+        }
+        .boxJdl {
+            align-self: center !important;
+            text-align: center !important;
+            width: 60% !important;
+            .jdlApp {
+                font-size: 2rem;
+                font-family: 'SpicyRice' !important;
+            }
+        }
+        .boxBtn {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .btnApp {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .menuMateri {
+        // .isi {
+            border-style: dashed;
+            border-width: 2px;
+            // padding: 10px;
+            border-color: peachpuff;
+            .smImg1 {
+                max-width: 21%;
+                position: absolute;
+                left: 15%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 5;
+            }
+            .smImg2 {
+                max-width: 21%;
+                position: absolute;
+                left: 33%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 4;
+            }
+            .smImg3 {
+                max-width: 21%;
+                position: absolute;
+                left: 51%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 3;
+            }
+            .smImg4 {
+                max-width: 21%;
+                position: absolute;
+                left: 69%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 2;
+            }
+            .smImg5 {
+                max-width: 17%;
+                position: absolute;
+                left: 85%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+            }
+        // }
+    }
+
+    .icnBtnFooter1 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .icnBtnFooter2 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom: 0px;
+        right: 0px;
+    }
+}

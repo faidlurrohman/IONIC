@@ -1,0 +1,193 @@
+page-profil {
+
+    .scroll-content {
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+
+    ion-row {
+        flex: 1;
+    }
+
+    //header
+    .headerApp {
+        background-color: peachpuff;
+        width: 100% !important;
+        display: inline-flex;
+        .boxLogo {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .lgApp {
+                max-width: 40%;
+            }
+        }
+        .boxJdl {
+            align-self: center !important;
+            text-align: center !important;
+            width: 60% !important;
+            .jdlApp {
+                font-size: 2rem;
+                font-family: 'SpicyRice' !important;
+            }
+        }
+        .boxBtn {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .btnApp {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .slide1 {
+        .slideProfil1 {
+            h6 {
+                padding: 10px;
+                border-style: dashed;
+                border-width: 2px;
+                border-color: peachpuff;
+                font-size: 1.3rem;
+                margin-bottom: 0 !important;
+                font-family: 'Lora' !important;
+            }
+        }
+        .slideProfil2 {
+            .pengembangImg {
+                max-width: 90%;
+            }
+            .jdlPengembang {
+                max-width: 40%;
+            }
+            .nmr1 {
+                display: flex;
+                margin-left: 15px;
+                p {
+                    font-size: 1.3rem;
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                    font-family: 'Lora' !important;
+                }
+                .pnmr {
+                    margin-right: 10px;
+                }
+                .pnm {
+                    margin-right: 10px;
+                }
+            }
+            .nmr2 {
+                display: flex;
+                margin-left: 15px;
+                p {
+                    font-size: 1.3rem;
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                    font-family: 'Lora' !important;
+                }
+                .pnmr {
+                    margin-right: 10px;
+                }
+                .pnm {
+                    margin-right: 10px;
+                }
+            }
+            .nmr3 {
+                display: flex;
+                margin-left: 15px;
+                p {
+                    font-size: 1.3rem;
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                    font-family: 'Lora' !important;
+                }
+                .pnmr {
+                    margin-right: 10px;
+                }
+                .pnm {
+                    margin-right: 10px;
+                }
+            }
+            .nmr4 {
+                display: flex;
+                margin-left: 15px;
+                p {
+                    font-size: 1.3rem;
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                    font-family: 'Lora' !important;
+                }
+                .pnmr {
+                    margin-right: 10px;
+                }
+                .pnm {
+                    margin-right: 10px;
+                }
+            }
+            .nmr5 {
+                display: flex;
+                margin-left: 15px;
+                p {
+                    font-size: 1.3rem;
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                    font-family: 'Lora' !important;
+                }
+                .pnmr {
+                    margin-right: 10px;
+                }
+                .pnm {
+                    margin-right: 10px;
+                }
+            }
+        }
+        .icnBtnFooter3 {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            bottom: 0px;
+            right: 0px;
+        }
+    }
+    .slide2 {
+        .slideProfil1 {
+            .jdlPembimbing {
+                max-width: 25%;
+            }
+        }
+        .slideProfil2 {
+            p {
+                font-size: 1.3rem;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+                font-family: 'Lora' !important;
+            }
+            .pembimbingImg1 {
+                max-width: 60%;
+            }
+            .pembimbingImg2 {
+                max-width: 60%;
+            }
+            .pembimbingImg3 {
+                max-width: 60%;
+            }
+            .pembimbingImg4 {
+                max-width: 60%;
+            }
+        }
+        .icnBtnFooter3 {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            bottom: 0px;
+            right: 0px;
+        }
+    }
+}

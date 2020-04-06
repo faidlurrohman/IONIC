@@ -1,0 +1,65 @@
+<ion-content padding>
+  <div class="headerApp">
+    <div class="boxLogo">
+      <img src="assets/imgs/unesa.png" class="lgApp">
+    </div>
+    <div class="boxJdl">
+      <p class="jdlApp">ChemOnDro LARI "Laju Reaksi"</p>
+    </div>
+    <div class="boxBtn">
+      <img src="assets/imgs/mute.png" class="btnApp" (click)="soundOn()" [class.hide]="onSound">
+      <img src="assets/imgs/speaker.png" class="btnApp" (click)="soundOff()" [class.hide]="offSound">
+      <img src="assets/imgs/power-off.png" class="btnApp" (click)="keluar()">
+    </div>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 class="menu1" text-center>
+        <button ion-button color="peach" (click)="petunjuk()">
+          <p class="btnText">Petunjuk</p>
+          &nbsp;&nbsp;
+          <img src="assets/imgs/unlock.png" class="icnBtn">
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-3 class="menu2" text-center>
+        <button ion-button block color="peach" (click)="tujuan()" [disabled]="pmbBool">
+          <p class="btnText">Tujuan<br>Pembelajaran</p>
+          &nbsp;&nbsp;
+          <img [src]="pmbImg" class="icnBtn">
+        </button>
+      </ion-col>
+      <ion-col col-3 class="menu2" text-center>
+        <button ion-button block color="peach" (click)="materi()" [disabled]="mtrBool">
+          <p class="btnText">Materi</p>
+          &nbsp;&nbsp;
+          <img [src]="mtrImg" class="icnBtn">
+        </button>
+      </ion-col>
+      <ion-col col-3 class="menu2" text-center>
+        <button ion-button block color="peach" (click)="praktikum()" [disabled]="prkBool">
+          <p class="btnText">Praktikum</p>
+          &nbsp;&nbsp;
+          <img [src]="prkImg" class="icnBtn">
+        </button>
+      </ion-col>
+      <ion-col col-3 class="menu2" text-center>
+        <button ion-button block color="peach" (click)="evaluasi()" [disabled]="evlBool">
+          <p class="btnText">Evaluasi</p>
+          &nbsp;&nbsp;
+          <img [src]="evlImg" class="icnBtn">
+        </button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12 class="menu3" text-center>
+        <button ion-button color="peach" (click)="profil()" [disabled]="prfBool">
+          <p class="btnText">Profil</p>
+          &nbsp;&nbsp;
+          <img [src]="prfImg" class="icnBtn">
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

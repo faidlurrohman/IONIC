@@ -1,0 +1,40 @@
+<ion-content padding>
+  <div class="headerApp">
+    <div class="boxLogo">
+      <img src="assets/imgs/unesa.png" class="lgApp">
+    </div>
+    <div class="boxJdl">
+      <p class="jdlApp">MATERI - SUB MATERI</p>
+    </div>
+    <div class="boxBtn">
+      <img src="assets/imgs/mute.png" class="btnApp" (click)="soundOn()" [class.hide]="onSound">
+      <img src="assets/imgs/speaker.png" class="btnApp" (click)="soundOff()" [class.hide]="offSound">
+      <img src="assets/imgs/power-off.png" class="btnApp" (click)="keluar()">
+    </div>
+  </div>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 class="menuMateri" text-center>
+        <!-- <div class="isi">
+          <ion-row>
+            <ion-col col-12 text-center> -->
+              <img src="assets/imgs/sub1.png" class="smImg1" (click)="sub1()">
+              <img src="assets/imgs/sub2.png" class="smImg2" (click)="sub2()">
+              <img src="assets/imgs/sub3.png" class="smImg3" (click)="sub3()">
+              <img src="assets/imgs/sub4.png" class="smImg4" (click)="sub4()">
+              <img src="assets/imgs/sub5.png" class="smImg5" (click)="sub5()">
+            <!-- </ion-col>
+          </ion-row>
+        </div> -->
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-6>
+        <img src="assets/imgs/back.png" class="icnBtnFooter1" (click)="materi()">
+      </ion-col>
+      <ion-col col-6>
+        <img src="assets/imgs/home.png" class="icnBtnFooter2" (click)="menu()">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

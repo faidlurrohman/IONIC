@@ -1,0 +1,79 @@
+page-menu {
+    ion-content{
+        background-image: url('../assets/imgs/bgr.png');
+        background-size: cover;
+        background-repeat: round;
+    }
+
+    .scroll-content {
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+
+    ion-row {
+        flex: 1;
+    }
+
+    //header
+    .headerApp {
+        background-color: peachpuff;
+        width: 100% !important;
+        display: inline-flex;
+        .boxLogo {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .lgApp {
+                max-width: 40%;
+            }
+        }
+        .boxJdl {
+            align-self: center !important;
+            text-align: center !important;
+            width: 60% !important;
+            .jdlApp {
+                font-size: 2rem;
+                font-family: 'SpicyRice' !important;
+            }
+        }
+        .boxBtn {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .btnApp {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .menu1 {
+        align-self: center !important;
+    }
+    .menu2 {
+        align-self: center !important;
+    }
+    .menu3 {
+        align-self: center !important;
+    }
+    .btnText {
+        font-weight: bold;
+        text-transform: capitalize;
+        color: black;
+        font-family: 'Lora' !important;
+    }
+    .icnBtn {
+        width: 25px;
+        height: 25px;
+    }
+
+    a[disabled], button[disabled], [ion-button][disabled] {
+        opacity: 10;
+    }
+}

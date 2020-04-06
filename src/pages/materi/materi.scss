@@ -1,0 +1,66 @@
+page-materi {
+
+    .scroll-content {
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+
+    ion-row {
+        flex: 1;
+    }
+
+    //header
+    .headerApp {
+        background-color: peachpuff;
+        width: 100% !important;
+        display: inline-flex;
+        .boxLogo {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .lgApp {
+                max-width: 40%;
+            }
+        }
+        .boxJdl {
+            align-self: center !important;
+            text-align: center !important;
+            width: 60% !important;
+            .jdlApp {
+                font-size: 2rem;
+                font-family: 'SpicyRice' !important;
+            }
+        }
+        .boxBtn {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .btnApp {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .menuMateri {
+        // align-self: center !important;
+        padding: 20px !important;
+        .btnImg {
+            max-width: 50%;
+        }
+    }
+
+    .icnBtnFooter {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom: 0px;
+        right: 0px;
+    }
+}

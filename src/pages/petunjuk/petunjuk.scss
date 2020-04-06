@@ -1,0 +1,77 @@
+page-petunjuk {
+
+    .scroll-content {
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+
+    ion-row {
+        flex: 1;
+    }
+
+    //header
+    .headerApp {
+        background-color: peachpuff;
+        width: 100% !important;
+        display: inline-flex;
+        .boxLogo {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .lgApp {
+                max-width: 40%;
+            }
+        }
+        .boxJdl {
+            align-self: center !important;
+            text-align: center !important;
+            width: 60% !important;
+            .jdlApp {
+                font-size: 2rem;
+                font-family: 'SpicyRice' !important;
+            }
+        }
+        .boxBtn {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .btnApp {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+    
+    .cont {
+        // .isi {
+            border-style: dashed;
+            border-width: 2px;
+            padding: 5px;
+            border-color: peachpuff;
+            .dtlPetunjuk {
+                align-self: flex-end;
+                h6 {
+                    font-family: 'Lora' !important;
+                }   
+            }  
+            .icnBtn {
+                position: absolute;
+                width: 25px;
+                height: 25px;
+            }
+        // }
+    }
+    .icnBtnFooter {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom: 0px;
+        right: 0px;
+    }
+}

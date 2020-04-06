@@ -1,0 +1,402 @@
+<ion-content padding>
+  <div class="headerApp">
+    <div class="boxLogo">
+      <img src="assets/imgs/unesa.png" class="lgApp">
+    </div>
+    <div class="boxJdl">
+      <p class="jdlApp">EVALUASI</p>
+    </div>
+    <div class="boxBtn">
+        <img src="assets/imgs/mute.png" class="btnApp" (click)="soundOn()" [class.hide]="onSound">
+        <img src="assets/imgs/speaker.png" class="btnApp" (click)="soundOff()" [class.hide]="offSound">
+      <img src="assets/imgs/power-off.png" class="btnApp" (click)="keluar()">
+    </div>
+  </div>
+  <ion-grid>
+    <ion-row class="contMulai" [class.hide]="evlMulai">
+      <ion-col col-6>
+        <img src="assets/imgs/panduan.png" class="evlImg">
+      </ion-col>
+      <ion-col col-6 text-center>
+        <form [formGroup]="myForm" (ngSubmit)="mulai()" novalidate>
+          <ion-item [class.invalid]="(!myForm.controls.name.valid) && isName">
+            <ion-label color="dark" floating>Masukkan Nama</ion-label>
+            <ion-input type="text" (keyup)="validate('name')" formControlName="name" [(ngModel)]="nama"></ion-input>
+          </ion-item>
+          <p *ngIf="myForm.get('name').errors && myForm.get('name').dirty" style="text-align: right; font-size: 10px; padding-right: 16px;">
+            <span style="color: red" ion-text *ngIf="myForm.get('name').hasError('required')">Masukkan Nama Anda!</span>
+          </p>
+          <button ion-button color="peach" round style="margin-top: 5%;" [disabled]="myForm.invalid">Mulai</button>
+        </form>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cont1" [class.hide]="soalEvl1">
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <img src="assets/imgs/soal/1/soal1.png" class="soal1Img">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalA1()"><img src="assets/imgs/soal/1/a1.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalB1()"><img src="assets/imgs/soal/1/b1.png"></button>
+          </ion-col>
+        <!-- </ion-row>
+        <ion-row> -->
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalC1()"><img src="assets/imgs/soal/1/c1.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalD1()"><img src="assets/imgs/soal/1/d1.png"></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cont2" [class.hide]="soalEvl2">
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <img src="assets/imgs/soal/2/soal2.png" class="soal2Img">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalA2()"><img src="assets/imgs/soal/2/a2.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalB2()"><img src="assets/imgs/soal/2/b2.png"></button>
+          </ion-col>
+        <!-- </ion-row>
+        <ion-row> -->
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalC2()"><img src="assets/imgs/soal/2/c2.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalD2()"><img src="assets/imgs/soal/2/d2.png"></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cont3" [class.hide]="soalEvl3">
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <img src="assets/imgs/soal/3/soal3.png" class="soal3Img">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalA3()"><img src="assets/imgs/soal/3/a3.png"></button>
+          </ion-col>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalB3()"><img src="assets/imgs/soal/3/b3.png"></button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalC3()"><img src="assets/imgs/soal/3/c3.png"></button>
+          </ion-col>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalD3()"><img src="assets/imgs/soal/3/d3.png"></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cont4" [class.hide]="soalEvl4">
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <img src="assets/imgs/soal/4/soal4.png" class="soal4Img">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalA4()"><img src="assets/imgs/soal/4/a4.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalB4()"><img src="assets/imgs/soal/4/b4.png"></button>
+          </ion-col>
+        <!-- </ion-row>
+        <ion-row> -->
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalC4()"><img src="assets/imgs/soal/4/c4.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalD4()"><img src="assets/imgs/soal/4/d4.png"></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cont5" [class.hide]="soalEvl5">
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <img src="assets/imgs/soal/5/soal5.png" class="soal5Img">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalA5()"><img src="assets/imgs/soal/5/a5.png"></button>
+          </ion-col>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalB5()"><img src="assets/imgs/soal/5/b5.png"></button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalC5()"><img src="assets/imgs/soal/5/c5.png"></button>
+          </ion-col>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalD5()"><img src="assets/imgs/soal/5/d5.png"></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cont6" [class.hide]="soalEvl6">
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <img src="assets/imgs/soal/6/soal6.png" class="soal6Img">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalA6()"><img src="assets/imgs/soal/6/a6.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalB6()"><img src="assets/imgs/soal/6/b6.png"></button>
+          </ion-col>
+        <!-- </ion-row>
+        <ion-row> -->
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalC6()"><img src="assets/imgs/soal/6/c6.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalD6()"><img src="assets/imgs/soal/6/d6.png"></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cont7" [class.hide]="soalEvl7">
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <img src="assets/imgs/soal/7/soal7.png" class="soal7Img">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button block outline color="peach" (click)="jwbSoalA7()"><img src="assets/imgs/soal/7/a7.png"></button>
+          </ion-col>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button block outline color="peach" (click)="jwbSoalB7()"><img src="assets/imgs/soal/7/b7.png"></button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button block outline color="peach" (click)="jwbSoalC7()"><img src="assets/imgs/soal/7/c7.png"></button>
+          </ion-col>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button block outline color="peach" (click)="jwbSoalD7()"><img src="assets/imgs/soal/7/d7.png"></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cont8" [class.hide]="soalEvl8">
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <img src="assets/imgs/soal/8/soal8.png" class="soal8Img">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalA8()"><img src="assets/imgs/soal/8/a8.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalB8()"><img src="assets/imgs/soal/8/b8.png"></button>
+          </ion-col>
+        <!-- </ion-row>
+        <ion-row> -->
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalC8()"><img src="assets/imgs/soal/8/c8.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalD8()"><img src="assets/imgs/soal/8/d8.png"></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cont9" [class.hide]="soalEvl9">
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <img src="assets/imgs/soal/9/soal9.png" class="soal9Img">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalA9()"><img src="assets/imgs/soal/9/a9.png"></button>
+          </ion-col>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalB9()"><img src="assets/imgs/soal/9/b9.png"></button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalC9()"><img src="assets/imgs/soal/9/c9.png"></button>
+          </ion-col>
+          <ion-col col-6 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalD9()"><img src="assets/imgs/soal/9/d9.png"></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="cont10" [class.hide]="soalEvl10">
+      <ion-col col-12>
+        <ion-row>
+          <ion-col col-12>
+            <img src="assets/imgs/soal/10/soal10.png" class="soal10Img">
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalA10()"><img src="assets/imgs/soal/10/a10.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalB10()"><img src="assets/imgs/soal/10/b10.png"></button>
+          </ion-col>
+        <!-- </ion-row>
+        <ion-row> -->
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalC10()"><img src="assets/imgs/soal/10/c10.png"></button>
+          </ion-col>
+          <ion-col col-3 style="padding: 0; padding-left: 5px; padding-right: 5px;">
+            <button ion-button small block outline color="peach" (click)="jwbSoalD10()"><img src="assets/imgs/soal/10/d10.png"></button>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row class="contHsl1" [class.hide]="hslSoal1">
+      <ion-col col-12>
+        <img src="assets/imgs/hasil/1.png" class="hsl1" [class.hide]="hslSoal1">
+        <img [src]="cekEmot" class="cekImg">
+        <img src="assets/imgs/next.png" class="nextHsl" [class.hide]="hslSoal1" (click)="next1()">
+        <!-- <button ion-button small color="primary" class="lhtHsl">Lihat Pembahasan</button> -->
+        <!-- <img src="assets/imgs/next.png" class="nextHsl"> -->
+      </ion-col>
+    </ion-row>
+    <ion-row class="contHsl2" [class.hide]="hslSoal2">
+      <ion-col col-12>
+        <img src="assets/imgs/hasil/2.png" class="hsl2" [class.hide]="hslSoal2">
+        <img [src]="cekEmot" class="cekImg">
+        <img src="assets/imgs/next.png" class="nextHsl" [class.hide]="hslSoal2" (click)="next2()">
+      </ion-col>
+    </ion-row>
+    <ion-row class="contHsl3" [class.hide]="hslSoal3">
+      <ion-col col-12>
+        <img src="assets/imgs/hasil/3.png" class="hsl3" [class.hide]="hslSoal3">
+        <img [src]="cekEmot" class="cekImg">
+        <img src="assets/imgs/next.png" class="nextHsl" [class.hide]="hslSoal3" (click)="next3()">
+      </ion-col>
+    </ion-row>
+    <ion-row class="contHsl4" [class.hide]="hslSoal4">
+      <ion-col col-12>
+        <img src="assets/imgs/hasil/4.png" class="hsl4" [class.hide]="hslSoal4">
+        <img [src]="cekEmot" class="cekImg">
+        <img src="assets/imgs/next.png" class="nextHsl" [class.hide]="hslSoal4" (click)="next4()">
+      </ion-col>
+    </ion-row>
+    <ion-row class="contHsl5" [class.hide]="hslSoal5">
+      <ion-col col-12>
+        <img src="assets/imgs/hasil/5.png" class="hsl5" [class.hide]="hslSoal5">
+        <img [src]="cekEmot" class="cekImg">
+        <img src="assets/imgs/next.png" class="nextHsl" [class.hide]="hslSoal5" (click)="next5()">
+      </ion-col>
+    </ion-row>
+    <ion-row class="contHsl6" [class.hide]="hslSoal6">
+      <ion-col col-12>
+        <img src="assets/imgs/hasil/6.png" class="hsl6" [class.hide]="hslSoal6">
+        <img [src]="cekEmot" class="cekImg">
+        <img src="assets/imgs/next.png" class="nextHsl" [class.hide]="hslSoal6" (click)="next6()">
+      </ion-col>
+    </ion-row>
+    <ion-row class="contHsl7" [class.hide]="hslSoal7">
+      <ion-col col-12>
+        <img src="assets/imgs/hasil/7.png" class="hsl7" [class.hide]="hslSoal7">
+        <img [src]="cekEmot" class="cekImg">
+        <img src="assets/imgs/next.png" class="nextHsl" [class.hide]="hslSoal7" (click)="next7()">
+      </ion-col>
+    </ion-row>
+    <ion-row class="contHsl8" [class.hide]="hslSoal8">
+      <ion-col col-12>
+        <img src="assets/imgs/hasil/8.png" class="hsl8" [class.hide]="hslSoal8">
+        <img [src]="cekEmot" class="cekImg">
+        <img src="assets/imgs/next.png" class="nextHsl" [class.hide]="hslSoal8" (click)="next8()">
+      </ion-col>
+    </ion-row>
+    <ion-row class="contHsl9" [class.hide]="hslSoal9">
+      <ion-col col-12>
+        <img src="assets/imgs/hasil/9.png" class="hsl9" [class.hide]="hslSoal9">
+        <img [src]="cekEmot" class="cekImg">
+        <img src="assets/imgs/next.png" class="nextHsl" [class.hide]="hslSoal9" (click)="next9()">
+      </ion-col>
+    </ion-row>
+    <ion-row class="contHsl10" [class.hide]="hslSoal10">
+      <ion-col col-12>
+        <img src="assets/imgs/hasil/10.png" class="hsl10" [class.hide]="hslSoal10">
+        <img [src]="cekEmot" class="cekImg">
+        <button ion-button small color="peach" class="lhtSkor" [class.hide]="hslSoal10" (click)="lhtSkor()">Lihat Skor</button>
+      </ion-col>
+    </ion-row>
+    <ion-row class="skorAkhir" [class.hide]="skorAkhir">
+      <ion-col col-6 class="contKiri" text-center>
+        <img src="assets/imgs/star.png" class="starImg">
+        <p class="nilai">
+          <b>
+            Nilai Anda:
+            <br>
+            {{ttlSkor}}
+          </b>
+        </p>
+        <p class="quote">
+          {{quoteSkor}}
+        </p>
+      </ion-col>
+      <ion-col col-6 class="contKanan" text-center>
+        <img src="assets/imgs/kunci.png" class="kunciImg">
+        <img src="assets/imgs/kkm.png" class="kkmImg">
+        <div class="contKunci">
+          <p class="kunci">
+            <b>
+              1.&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6.&nbsp;&nbsp;D<br>
+              2.&nbsp;&nbsp;D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7.&nbsp;&nbsp;C<br>
+              3.&nbsp;&nbsp;A&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.&nbsp;&nbsp;C<br>
+              4.&nbsp;&nbsp;C&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;9.&nbsp;&nbsp;D<br>
+              5.&nbsp;&nbsp;B&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;10.&nbsp;&nbsp;C<br>
+            </b>
+          </p>
+        </div>
+        <button ion-button small color="peach" class="ulangiEvl" (click)="ulangiEvl()">Ulangi</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col col-12>
+        <button ion-button small color="peach" class="lhtHsl" [class.hide]="hslSoal1" (click)="lhtHsl1()">Lihat Pembahasan</button>
+        <button ion-button small color="peach" class="lhtHsl" [class.hide]="hslSoal2" (click)="lhtHsl2()">Lihat Pembahasan</button>
+        <button ion-button small color="peach" class="lhtHsl" [class.hide]="hslSoal3" (click)="lhtHsl3()">Lihat Pembahasan</button>
+        <button ion-button small color="peach" class="lhtHsl" [class.hide]="hslSoal4" (click)="lhtHsl4()">Lihat Pembahasan</button>
+        <button ion-button small color="peach" class="lhtHsl" [class.hide]="hslSoal5" (click)="lhtHsl5()">Lihat Pembahasan</button>
+        <button ion-button small color="peach" class="lhtHsl" [class.hide]="hslSoal6" (click)="lhtHsl6()">Lihat Pembahasan</button>
+        <button ion-button small color="peach" class="lhtHsl" [class.hide]="hslSoal7" (click)="lhtHsl7()">Lihat Pembahasan</button>
+        <button ion-button small color="peach" class="lhtHsl" [class.hide]="hslSoal8" (click)="lhtHsl8()">Lihat Pembahasan</button>
+        <button ion-button small color="peach" class="lhtHsl" [class.hide]="hslSoal9" (click)="lhtHsl9()">Lihat Pembahasan</button>
+        <button ion-button small color="peach" class="lhtHsl" [class.hide]="hslSoal10" (click)="lhtHsl10()">Lihat Pembahasan</button>
+        <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,79 @@
+<ion-content padding>
+    <div class="headerApp">
+        <div class="boxLogo">
+            <img src="assets/imgs/unesa.png" class="lgApp">
+        </div>
+        <div class="boxJdl">
+            <p class="jdlApp">Profil</p>
+        </div>
+        <div class="boxBtn">
+            <img src="assets/imgs/mute.png" class="btnApp" (click)="soundOn()" [class.hide]="onSound">
+            <img src="assets/imgs/speaker.png" class="btnApp" (click)="soundOff()" [class.hide]="offSound">
+            <img src="assets/imgs/power-off.png" class="btnApp" (click)="keluar()">
+        </div>
+    </div>
+    <ion-grid>
+        <ion-slides>
+            <ion-slide class="slide1">
+                <ion-row>
+                    <ion-col col-12 class="slideProfil1" text-center>
+                        <h6>
+                            Merupakan media pembelajaran kimia berbasis android. 
+                            Seri dalam ChemOnDro ini berisi materi konsep laju reaksi yang merupakan materi kelas XI SMA/MA
+                        </h6>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-4 class="slideProfil2" text-center>
+                        <img src="assets/imgs/pengembangImg.jpg" class="pengembangImg">
+                    </ion-col>
+                    <ion-col col-8 class="slideProfil2" text-center>
+                        <img src="assets/imgs/pengembang.png" class="jdlPengembang">
+                        <div class="nmr1">
+                            <p class="pnmr">1.</p><p class="pnm">Khofifah Indah Farawansyah</p><p class="pnim">(17030194001)</p>
+                        </div>
+                        <div class="nmr2">
+                            <p class="pnmr">2.</p><p class="pnm">Wara Mulyaning Utami</p><p class="pnim">(17030194037)</p>
+                        </div>
+                        <div class="nmr3">
+                            <p class="pnmr">3.</p><p class="pnm">Rizky Ulfianah</p><p class="pnim">(17030194054)</p>
+                        </div>
+                        <div class="nmr4">
+                            <p class="pnmr">4.</p><p class="pnm">Angelina Nur Afni</p><p class="pnim">(17030194063)</p>
+                        </div>
+                        <div class="nmr5">
+                            <p class="pnmr">5.</p><p class="pnm">Lucky Prima</p><p class="pnim">(17030194070)</p>
+                        </div>
+                    </ion-col>
+                </ion-row>
+                <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+            </ion-slide>
+            <ion-slide class="slide2">
+                <ion-row>
+                    <ion-col col-12 class="slideProfil1" text-center>
+                        <img src="assets/imgs/pembimbing.png" class="jdlPembimbing">
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-col col-3 class="slideProfil2" text-center>
+                        <img src="assets/imgs/pembimbingImg1.jpg" class="pembimbingImg1">
+                        <p class="pnm1">Drs. Achmad Luthfi, M.Pd.</p>
+                    </ion-col>
+                    <ion-col col-3 class="slideProfil2" text-center>
+                        <img src="assets/imgs/pembimbingImg2.jpg" class="pembimbingImg2">
+                        <p class="pnm2">Dian Novita, S.T., M.Pd.</p>
+                    </ion-col>
+                    <ion-col col-3 class="slideProfil2" text-center>
+                        <img src="assets/imgs/pembimbingImg3.jpg" class="pembimbingImg3">
+                        <p class="pnm3">Bertha Yonatha, S.Pd., M.Pd.</p>
+                    </ion-col>
+                    <ion-col col-3 class="slideProfil2" text-center>
+                        <img src="assets/imgs/pembimbingImg4.jpg" class="pembimbingImg4">
+                        <p class="pnm4">Drs. Sukarmin, M.Pd.</p>
+                    </ion-col>
+                </ion-row>
+                <img src="assets/imgs/home.png" class="icnBtnFooter3" (click)="menu()">
+            </ion-slide>
+        </ion-slides>
+    </ion-grid>
+</ion-content>

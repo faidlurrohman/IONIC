@@ -1,0 +1,68 @@
+page-home {
+    .scroll-content {
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+
+    ion-row {
+        flex: 1;
+    }
+
+    //header
+    .headerApp {
+        // background-color: peachpuff;
+        width: 100% !important;
+        display: inline-flex;
+        .boxLogo {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .lgApp {
+                max-width: 40%;
+            }
+        }
+        .boxJdl {
+            align-self: center !important;
+            text-align: center !important;
+            width: 60% !important;
+            .jdlApp {
+                color: white;
+                font-size: 2rem;
+                font-family: 'SpicyRice' !important;
+            }
+        }
+        .boxBtn {
+            align-self:  !important;
+            text-align: center !important;
+            width: 20% !important;
+            .pkaApp {
+                font-size: 2rem;
+                border-style: solid;
+                border-width: 2px;
+                font-family: 'SpicyRice' !important;
+            }
+        }
+    }
+
+    .anm {
+        align-self: center !important;
+        .anmCont {
+            max-width: 30%;
+        }
+    }
+
+    .jdl {
+        align-self: center !important;
+        .jdlCont {
+            background-color: peachpuff;
+            font-size: 2rem;
+            font-family: 'SpicyRice' !important;
+        }
+    }
+}

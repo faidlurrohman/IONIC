@@ -1,0 +1,79 @@
+<ion-content padding>
+    <div class="headerApp">
+        <div class="boxLogo">
+            <img src="assets/imgs/unesa.png" class="lgApp">
+        </div>
+        <div class="boxJdl">
+            <p class="jdlApp">PETUNJUK</p>
+        </div>
+        <div class="boxBtn">
+            <img src="assets/imgs/mute.png" class="btnApp" (click)="soundOn()" [class.hide]="onSound">
+            <img src="assets/imgs/speaker.png" class="btnApp" (click)="soundOff()" [class.hide]="offSound">
+            <img src="assets/imgs/power-off.png" class="btnApp" (click)="keluar()">
+        </div>
+    </div>
+    <ion-grid>
+        <ion-row>
+            <ion-col col-12 class="cont">
+                <!-- <div class="isi"> -->
+                    <ion-row>
+                        <ion-col col-12 class="dtlPetunjuk">
+                            <h6>
+                                <img src="assets/imgs/speaker.png" class="icnBtn">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Untuk non/mengaktifkan volume suara aplikasi.
+                            </h6>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12 class="dtlPetunjuk">
+                            <h6>
+                                <img src="assets/imgs/power-off.png" class="icnBtn">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Untuk keluar dari aplikasi.
+                            </h6>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12 class="dtlPetunjuk">
+                            <h6>
+                                <img src="assets/imgs/home.png" class="icnBtn">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Untuk kembali ke slide menu utama.
+                            </h6>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12 class="dtlPetunjuk">
+                            <h6>
+                                <img src="assets/imgs/back.png" class="icnBtn">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Untuk kembali ke slide yang sebelumnya.
+                            </h6>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col col-12 class="dtlPetunjuk">
+                            <h6>
+                                <img src="assets/imgs/next.png" class="icnBtn">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                Untuk menuju ke slide yang selanjutnya.
+                            </h6>
+                        </ion-col>
+                    </ion-row>
+                    <!-- <ion-row>
+                        <ion-col> -->
+                            <!-- <h6 style="text-align: end; margin-right: 15px; margin-bottom: 1.5rem;"> -->
+                            <!-- <img src="assets/imgs/home.png" class="icnBtnFooter" (click)="menu()">
+                        </ion-col>
+                    </ion-row> -->
+                <!-- </div> -->
+            </ion-col>
+        </ion-row>
+        <ion-row>
+            <ion-col col-12>
+                <img src="assets/imgs/home.png" class="icnBtnFooter" (click)="menu()">
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+</ion-content>

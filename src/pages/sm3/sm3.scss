@@ -1,0 +1,93 @@
+page-sm3 {
+
+    .scroll-content {
+        overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    ion-grid {
+        padding: 0;
+        height: 100%;
+    }
+
+    ion-row {
+        flex: 1;
+    }
+
+    //header
+    .headerApp {
+        background-color: peachpuff;
+        width: 100% !important;
+        display: inline-flex;
+        .boxLogo {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .lgApp {
+                max-width: 40%;
+            }
+        }
+        .boxJdl {
+            align-self: center !important;
+            text-align: center !important;
+            width: 60% !important;
+            .jdlApp {
+                font-size: 2rem;
+                font-family: 'SpicyRice' !important;
+            }
+        }
+        .boxBtn {
+            align-self: center !important;
+            text-align: center !important;
+            width: 20% !important;
+            .btnApp {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+
+    .cont {
+        border-style: dashed;
+        border-width: 2px;
+        // padding: 10px;
+        border-color: peachpuff;
+        ion-slides {
+            height: auto;
+        }
+        // .p1Img {
+        //     max-width: 100%;
+        // }
+        // .p2Img {
+        //     max-width: 85%;
+        // }
+        // .p3Img {
+        //     max-width: 90%;
+        // }
+    }
+    
+    .icnBtnFooter1 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom: 0px;
+        left: 0px;
+    }
+
+    .icnBtnFooter2 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom: 0px;
+        left: 40px;
+    }
+
+    .icnBtnFooter3 {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom: 0px;
+        right: 0px;
+    }
+}
